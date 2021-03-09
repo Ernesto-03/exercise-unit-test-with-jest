@@ -10,9 +10,25 @@ console.log(sum(7,3))
 // (similar to the keyword `export` when using webpack)
 
 // we declare the function with the exact name "fromEuroToDollar"
-const fromEuroToDollar = (euros) => {
-    let monto = euros * 1.2;
-    return monto;
+const fromEuroToDollar = euro => {
+    
+    return euro * 1.206;
 }
-console.log(fromEuroToDollar(3.5));
-module.exports = { sum, fromEuroToDollar };
+
+console.log(fromEuroToDollar(120));
+
+const fromDollarToYen = dollar => {
+    
+    return (dollar * 0.83) * 127.9;
+}
+
+console.log(fromDollarToYen(100));
+
+const fromYenToPound = yen => {
+
+    return (yen * 0.0078) * 0.8;
+}
+
+console.log(fromYenToPound(100));
+
+module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
